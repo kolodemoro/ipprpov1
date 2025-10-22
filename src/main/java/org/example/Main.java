@@ -5,10 +5,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите слово для проверки палиндрома: ");
+        String word = scanner.nextLine();
+        System.out.println("Это палиндром: " + isPalindrome(word));
     }
     // Заглушка для варианта 9
     public static boolean isPalindrome(String word) {
-        return false;
+        String reversed = new StringBuilder(word).reverse().toString();
+        return word.equals(reversed);
     }
 
     // Заглушка для варианта 6
