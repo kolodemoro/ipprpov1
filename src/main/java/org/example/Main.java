@@ -12,8 +12,9 @@ public class Main {
     }
     // Заглушка для варианта 9
     public static boolean isPalindrome(String word) {
-        String reversed = new StringBuilder(word).reverse().toString();
-        return word.equals(reversed);
+        String clean = word.toLowerCase();
+        String reversed = new StringBuilder(clean).reverse().toString();
+        return clean.equals(reversed);
     }
 
     // Заглушка для варианта 6
